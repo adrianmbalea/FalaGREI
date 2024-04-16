@@ -1,0 +1,154 @@
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp mainPanel::l:::x}"
+			"$verticalGroup": "par l {comp mainPanel::l:::x}"
+		} ) {
+			name: "mainFrame"
+			"resizable": false
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {comp panelIzquierdo:::p::p, space :::p, comp tabbedPaneListaAmigos:::::x, space :::p}}"
+				"$verticalGroup": "par l {seq {comp tabbedPaneListaAmigos:::p:430:p, space :::x}, comp panelIzquierdo:::::x}"
+			} ) {
+				name: "mainPanel"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+					name: "tabbedPaneListaAmigos"
+					"font": new java.awt.Font( "sansserif", 0, 20 )
+					"foreground": new java.awt.Color( 35, 166, 97, 255 )
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {comp scrollPaneAmigos::l::362:x, seq l {space :::p, comp buttonEliminarAmigo:::p:150:p, space ::206:x}}"
+						"$verticalGroup": "par l {seq l {comp scrollPaneAmigos:::p:260:p, space u:::p, comp buttonEliminarAmigo:::p:57:p, space :0:28:x}}"
+					} ) {
+						name: "panelAmigos"
+						"background": &Color0 new java.awt.Color( 255, 255, 255, 255 )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPaneAmigos"
+							"font": &Font0 new java.awt.Font( "sansserif", 0, 20 )
+							add( new FormComponent( "javax.swing.JList" ) {
+								name: "listAmigos"
+								"font": &Font1 new java.awt.Font( "sansserif", 0, 20 )
+								"background": &Color1 new java.awt.Color( 255, 255, 255, 255 )
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "buttonEliminarAmigo"
+							"text": "Eliminar amigo"
+							"font": &Font2 new java.awt.Font( "SansSerif", 0, 17 )
+							"background": &Color2 new java.awt.Color( 255, 255, 255, 255 )
+							"foreground": &Color3 new java.awt.Color( 7, 164, 121, 255 )
+							"contentAreaFilled": false
+							"border": &EtchedBorder0 new javax.swing.border.EtchedBorder( 1, null, null )
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "eliminarAmigo", true ) )
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "Amigos"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {comp scrollPaneSolEnviadas::::362:x, seq l {space :::p, comp buttonEliminarSolEnviada:::p:169:p, space u:::p, comp buttonNuevaSolicitud:::p:150:p, space ::25:x}}"
+						"$verticalGroup": "par l {seq l {comp scrollPaneSolEnviadas:::p:260:p, space u:::p, par b {comp buttonEliminarSolEnviada::b:p:57:p, comp buttonNuevaSolicitud::b:p:57:p}, space :0:28:x}}"
+					} ) {
+						name: "panelSolEnviadas"
+						"background": #Color0
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPaneSolEnviadas"
+							"font": #Font0
+							add( new FormComponent( "javax.swing.JList" ) {
+								name: "listSolEnviadas"
+								"font": #Font1
+								"background": #Color1
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "buttonEliminarSolEnviada"
+							"text": "Cancelar solicitud"
+							"font": #Font2
+							"background": #Color2
+							"foreground": #Color3
+							"contentAreaFilled": false
+							"border": #EtchedBorder0
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "eliminarSolEnviada", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "buttonNuevaSolicitud"
+							"text": "Nueva solicitud"
+							"font": #Font2
+							"background": #Color2
+							"foreground": #Color3
+							"contentAreaFilled": false
+							"border": #EtchedBorder0
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "nuevaSolicitud", true ) )
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "Solicitudes enviadas"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {comp scrollPaneSolRecibidas::l:::x, seq l {space :::p, comp buttonAceptarSolicitud:::p:169:p, space u:::p, comp buttonRechazarSolicitud:::p:169:p, space :::x}}"
+						"$verticalGroup": "par l {seq l {comp scrollPaneSolRecibidas:::p:260:p, space u:::p, par b {comp buttonAceptarSolicitud::b:p:57:p, comp buttonRechazarSolicitud::b:p:57:p}, space :0:28:x}}"
+					} ) {
+						name: "panelSolRecibidas"
+						"background": #Color0
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPaneSolRecibidas"
+							"font": #Font0
+							add( new FormComponent( "javax.swing.JList" ) {
+								name: "listSolRecibidas"
+								"font": #Font1
+								"background": #Color1
+							} )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "buttonAceptarSolicitud"
+							"text": "Aceptar solicitud"
+							"font": #Font2
+							"background": #Color2
+							"foreground": #Color3
+							"contentAreaFilled": false
+							"border": #EtchedBorder0
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "aceptarSolicitud", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "buttonRechazarSolicitud"
+							"text": "Rechazar solicitud"
+							"font": #Font2
+							"background": #Color2
+							"foreground": #Color3
+							"contentAreaFilled": false
+							"border": #EtchedBorder0
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "rechazarSolicitud", true ) )
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "Solicitudes recibidas"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par l {seq {space :::p, comp labelGestionAmigos:::p:287:p}, seq l {space :p:28:p, comp label1:::p::p}}, space :::x}}"
+					"$verticalGroup": "par l {seq l {space :p:55:p, comp labelGestionAmigos:::p:57:p, space s:::p, comp label1:::p:176:p, space :::x}}"
+				} ) {
+					name: "panelIzquierdo"
+					"background": new java.awt.Color( 35, 166, 97, 255 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelGestionAmigos"
+						"text": "Gestión de amigos"
+						"font": new java.awt.Font( "SansSerif", 1, 22 )
+						"foreground": new java.awt.Color( 255, 255, 255, 255 )
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/programaCliente/gui/logo.png" )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 75, 20 )
+			"size": new java.awt.Dimension( 560, 395 )
+		} )
+	}
+}

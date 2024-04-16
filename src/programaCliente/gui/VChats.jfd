@@ -1,0 +1,102 @@
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp mainPanel::l:::x}"
+			"$verticalGroup": "par l {comp mainPanel::l:::x}"
+		} ) {
+			name: "mainFrame"
+			"maximumSize": new java.awt.Dimension( 1000, 700 )
+			"minimumSize": new java.awt.Dimension( 1000, 700 )
+			"preferredSize": new java.awt.Dimension( 1000, 700 )
+			"resizable": false
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {comp tabbedPaneChats::::0:x, comp panelInferior::t:::x, comp panelSuperior::l:::x}"
+				"$verticalGroup": "par l {seq l {comp panelSuperior:::p:60:p, space :::p, comp tabbedPaneChats:::p:519:p, space :::p, comp panelInferior:::::x}}"
+			} ) {
+				name: "mainPanel"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+					name: "tabbedPaneChats"
+					"tabPlacement": 2
+					"tabLayoutPolicy": 1
+					"font": new java.awt.Font( "sansserif", 0, 20 )
+					"foreground": new java.awt.Color( 255, 255, 255, 255 )
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "tabbedPaneChatsStateChanged", true ) )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq t {space :::x, par l {seq t {comp labelImagenDesierto:::p:202:p, space :p:183:p}, seq t {par t {comp labelNoAmigosConectados:::p:325:p, comp labelTodoTranquilo:::p:325:p}, space :p:119:p}}}}"
+						"$verticalGroup": "par l {seq l {space :p:102:p, comp labelImagenDesierto:::p:200:p, space :::p, comp labelTodoTranquilo:::p:57:p, space :::p, comp labelNoAmigosConectados:::p::p, space ::122:x}}"
+					} ) {
+						name: "panelNoAmigosConectados"
+						"background": new java.awt.Color( 85, 216, 147, 255 )
+						"font": new java.awt.Font( "sansserif", 0, 20 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "labelImagenDesierto"
+							"icon": new com.jformdesigner.model.SwingIcon( 0, "/programaCliente/gui/desierto.png" )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "labelTodoTranquilo"
+							"text": "Todo está tranquilo..."
+							"font": &Font0 new java.awt.Font( "SansSerif", 1, 22 )
+							"foreground": &Color0 new java.awt.Color( 255, 255, 255, 255 )
+							"background": &Color1 new java.awt.Color( 255, 255, 255, 255 )
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "labelNoAmigosConectados"
+							"text": "No hay amigos conectados"
+							"font": new java.awt.Font( "SansSerif", 1, 18 )
+							"foreground": #Color0
+							"background": #Color1
+							"horizontalAlignment": 0
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "                                                                              "
+						"background": new java.awt.Color( 35, 166, 97, 255 )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :p:59:p, comp labelBienvenido:::p:287:p, space ::348:x, comp buttonAgregarAmigo:::p:98:p, space :::p}}"
+					"$verticalGroup": "par l {seq {space :0:0:x, par b {comp labelBienvenido::b:p:57:p, comp buttonAgregarAmigo::b:::x}, space :::p}}"
+				} ) {
+					name: "panelSuperior"
+					"background": new java.awt.Color( 35, 166, 97, 255 )
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelBienvenido"
+						"text": "Amigos en línea"
+						"font": #Font0
+						"foreground": #Color0
+						"background": #Color1
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "programaCliente.gui.chat.swing.BadgeButton" ) {
+						name: "buttonAgregarAmigo"
+						"font": new java.awt.Font( "SansSerif", 0, 17 )
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+						"contentAreaFilled": false
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/programaCliente/gui/iconoAgregarUsuario.png" )
+						"badgeColor": new java.awt.Color( 0, 133, 237, 255 )
+						"text": "0"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "agregarAmigo", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {space :0:0:x}"
+					"$verticalGroup": "par l {space :0:0:x}"
+				} ) {
+					name: "panelInferior"
+					"background": new java.awt.Color( 35, 166, 97, 255 )
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 26, 10 )
+			"size": new java.awt.Dimension( 800, 560 )
+		} )
+	}
+}

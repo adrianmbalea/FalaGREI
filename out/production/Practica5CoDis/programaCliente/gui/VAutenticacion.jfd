@@ -1,0 +1,157 @@
+JFDML JFormDesigner: "8.2.0.0.331" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {comp mainPanel:::::x, space :::x}}"
+			"$verticalGroup": "par l {seq l {comp mainPanel:::p:441:p, space :0:0:x}}"
+		} ) {
+			name: "mainFrame"
+			"maximumSize": new java.awt.Dimension( 700, 500 )
+			"minimumSize": new java.awt.Dimension( 700, 500 )
+			"preferredSize": new java.awt.Dimension( 700, 500 )
+			"resizable": false
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {comp panelIzquierdo:::p::p, space :::p, comp tabbedPane:::p:390:p, space :p:100:p}}"
+				"$verticalGroup": "par l {comp tabbedPane::l::0:x, comp panelIzquierdo::l:::x}"
+			} ) {
+				name: "mainPanel"
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"maximumSize": new java.awt.Dimension( 700, 500 )
+				"minimumSize": new java.awt.Dimension( 700, 500 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par l {seq {space :::p, comp labelBienvenido:::p:288:p}, seq l {space :p:29:p, comp label1:::p::p}}, space :::x}}"
+					"$verticalGroup": "par l {seq l {space :p:48:p, comp labelBienvenido:::p:58:p, space s:::p, comp label1:::p:176:p, space :::p}}"
+				} ) {
+					name: "panelIzquierdo"
+					"background": new java.awt.Color( 35, 166, 97, 255 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelBienvenido"
+						"text": "Bienvenido de nuevo!"
+						"font": &Font0 new java.awt.Font( "SansSerif", 1, 22 )
+						"foreground": new java.awt.Color( 255, 255, 255, 255 )
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/programaCliente/gui/logo.png" )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+					name: "tabbedPane"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"foreground": new java.awt.Color( 7, 164, 121, 255 )
+					"selectedIndex": 0
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"font": new java.awt.Font( "sansserif", 0, 18 )
+					"tabPlacement": 3
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq t {par t {seq l {par l {seq {space :p:39:p, comp labelInicioDeSesion:::p:287:p}, seq {space :::p, comp buttonIniciarSesion:::p:125:p}}, space :0:58:x}, seq l {space :::p, par l {comp textFieldUsuario::::378:x, comp textFieldContrasenha::::378:x}}}, space :::p}}"
+						"$verticalGroup": "par l {seq l {space :p:99:p, comp labelInicioDeSesion:::p:57:p, space :::p, comp textFieldUsuario:::p:47:p, space u:::p, comp textFieldContrasenha:::p:47:p, space u:::p, comp buttonIniciarSesion:::p:57:p, space ::69:x}}"
+					} ) {
+						name: "panelInicioSesion"
+						"background": &Color0 new java.awt.Color( 255, 255, 255, 255 )
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "labelInicioDeSesion"
+							"text": "Inicio de sesión"
+							"font": #Font0
+							"foreground": &Color1 new java.awt.Color( 7, 164, 121, 255 )
+							"background": sfield java.awt.Color black
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JPasswordField" ) {
+							name: "textFieldContrasenha"
+							"background": &Color2 new java.awt.Color( 255, 255, 255, 255 )
+							"border": &EtchedBorder0 new javax.swing.border.EtchedBorder( 1, null, null )
+							"caretColor": &Color3 new java.awt.Color( 0, 0, 0, 255 )
+							"foreground": sfield java.awt.Color lightGray
+							"text": "Introduce tu contraseña"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "textFieldContrasenhaMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textFieldUsuario"
+							"background": #Color2
+							"border": #EtchedBorder0
+							"caretColor": #Color3
+							"foreground": sfield java.awt.Color lightGray
+							"text": "Introduce tu nombre de usuario"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "textFieldUsuarioMousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "buttonIniciarSesion"
+							"text": "Iniciar sesión"
+							"font": &Font1 new java.awt.Font( "SansSerif", 0, 17 )
+							"background": &Color4 new java.awt.Color( 255, 255, 255, 255 )
+							"foreground": &Color5 new java.awt.Color( 7, 164, 121, 255 )
+							"contentAreaFilled": false
+							"border": #EtchedBorder0
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iniciarSesion", true ) )
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "Iniciar Sesión"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :p:35:p, comp labelRegistro:::p:287:p, space ::68:x}, seq {space :::p, par l {seq l {comp buttonRegistrarse2:::p:113:p, space :0:0:x}, comp textFieldUsuario2::l:::x, comp textFieldContrasenha2::t::378:x, comp textFieldContrasenha3::l::378:x}, space :::p}}"
+						"$verticalGroup": "par l {seq l {space :p:75:p, comp labelRegistro:::p:57:p, space :::p, comp textFieldUsuario2:::p:47:p, space :p:12:p, comp textFieldContrasenha2:::p:47:p, space u:::p, comp textFieldContrasenha3:::p:47:p, space :p:12:p, comp buttonRegistrarse2:::p:57:p, space ::34:x}}"
+					} ) {
+						name: "panelRegistro"
+						"background": #Color0
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "labelRegistro"
+							"text": "Crear un nuevo usuario"
+							"font": #Font0
+							"foreground": #Color1
+							"background": sfield java.awt.Color black
+							"horizontalAlignment": 0
+						} )
+						add( new FormComponent( "javax.swing.JPasswordField" ) {
+							name: "textFieldContrasenha2"
+							"background": #Color2
+							"border": #EtchedBorder0
+							"caretColor": #Color3
+							"foreground": sfield java.awt.Color lightGray
+							"text": "Introduce tu contraseña"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "textFieldContrasenha2MousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textFieldUsuario2"
+							"background": #Color2
+							"border": #EtchedBorder0
+							"caretColor": #Color3
+							"foreground": sfield java.awt.Color lightGray
+							"text": "Introduce tu nombre de usuario"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "textFieldUsuario2MousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JPasswordField" ) {
+							name: "textFieldContrasenha3"
+							"background": #Color2
+							"border": #EtchedBorder0
+							"caretColor": #Color3
+							"foreground": sfield java.awt.Color lightGray
+							"text": "Repite tu contraseña"
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "textFieldContrasenha3MousePressed", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "buttonRegistrarse2"
+							"text": "Registrarse"
+							"font": #Font1
+							"background": #Color4
+							"foreground": #Color5
+							"contentAreaFilled": false
+							"border": #EtchedBorder0
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "registrarse2", true ) )
+						} )
+					}, new FormLayoutConstraints( null ) {
+						"title": "Registrarse"
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 80, 20 )
+			"size": new java.awt.Dimension( 560, 390 )
+		} )
+	}
+}
